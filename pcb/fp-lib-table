@@ -1,0 +1,5 @@
+(fp_lib_table
+  (lib (name "SNES_MultiOut")(type "KiCad")(uri "${KIPRJMOD}/lib/snes_multiout")(options "")(descr ""))
+  (lib (name "N64_RCP")(type "KiCad")(uri "${KIPRJMOD}/lib/n64rcp")(options "")(descr ""))
+  (lib (name "smd_edge_con")(type "KiCad")(uri "${KIPRJMOD}/lib/smd_edge_con.pretty")(options "")(descr ""))
+)

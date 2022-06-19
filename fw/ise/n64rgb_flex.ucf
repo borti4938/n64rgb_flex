@@ -1,0 +1,57 @@
+
+## N64 Video Inputs
+## ================
+NET "VCLK_i"  LOC = "P40" | BUFG = CLK;
+NET "nDSYNC_i"  LOC = "P44";
+NET "D_i<6>"  LOC = "P43";
+NET "D_i<5>"  LOC = "P42";
+NET "D_i<4>"  LOC = "P39";
+NET "D_i<3>"  LOC = "P38";
+NET "D_i<2>"  LOC = "P37";
+NET "D_i<1>"  LOC = "P35";
+NET "D_i<0>"  LOC = "P34";
+
+
+## Video Outputs
+## =============
+NET "R_o<6>"  LOC = "P3";
+NET "R_o<5>"  LOC = "P5";
+NET "R_o<4>"  LOC = "P6";
+NET "R_o<3>"  LOC = "P8";
+NET "R_o<2>"  LOC = "P10";
+NET "R_o<1>"  LOC = "P11";
+NET "R_o<0>"  LOC = "P12";
+NET "G_o<6>"  LOC = "P22";
+NET "G_o<5>"  LOC = "P23";
+NET "G_o<4>"  LOC = "P25";
+NET "G_o<3>"  LOC = "P27";
+NET "G_o<2>"  LOC = "P28";
+NET "G_o<1>"  LOC = "P30";
+NET "G_o<0>"  LOC = "P31";
+NET "B_o<6>"  LOC = "P13";
+NET "B_o<5>"  LOC = "P14";
+NET "B_o<4>"  LOC = "P15";
+NET "B_o<3>"  LOC = "P18";
+NET "B_o<2>"  LOC = "P19";
+NET "B_o<1>"  LOC = "P20";
+NET "B_o<0>"  LOC = "P21";
+NET "nCSYNC_o"  LOC = "P2";
+
+
+## Jumper
+## ======
+NET "nViDeBlur_i"  LOC = "P33" | PULLUP;
+
+
+## Timing Specs
+## ============
+NET "VCLK_i" TNM_NET = VCLK_i;
+TIMESPEC TS_CLK_i = PERIOD "VCLK_i" 20 ns HIGH 60%;
+NET "D_i<0>" OFFSET = IN 8 ns VALID 12 ns BEFORE "VCLK_i" RISING;
+NET "D_i<1>" OFFSET = IN 8 ns VALID 12 ns BEFORE "VCLK_i" RISING;
+NET "D_i<2>" OFFSET = IN 8 ns VALID 12 ns BEFORE "VCLK_i" RISING;
+NET "D_i<3>" OFFSET = IN 8 ns VALID 12 ns BEFORE "VCLK_i" RISING;
+NET "D_i<4>" OFFSET = IN 8 ns VALID 12 ns BEFORE "VCLK_i" RISING;
+NET "D_i<5>" OFFSET = IN 8 ns VALID 12 ns BEFORE "VCLK_i" RISING;
+NET "D_i<6>" OFFSET = IN 8 ns VALID 12 ns BEFORE "VCLK_i" RISING;
+NET "nDSYNC_i" OFFSET = IN 8 ns VALID 12 ns BEFORE "VCLK_i" RISING;
