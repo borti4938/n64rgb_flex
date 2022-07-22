@@ -35,7 +35,7 @@ However, there might be some awesome shops out there selling the boards for a gr
 ## Checklist: How to build the project
 
 - Use PCB files (either [KiCad-PCB design file](./pcb/n64rgb_v3.kicad_pcb) or [Gerber files](./pcb/gerber/)) to order your own PCB with following specs (might be not comprehensive)  
-  - Size: 145.5mm x 27.5mm
+  - Size: 160.5mm x 27.5mm
   - Layer: 2
   - FPC thickness: 0.15mm
   - Min hole size: dia 0.25mm / ring 0.45mm or lower
@@ -144,6 +144,11 @@ You need three bends:
 - opened: use low pass filter
 - closed: bypass
 
+#### JP11 - JP13 (Cable)
+
+- all opened: NTSC cable
+- all closed: PAL cable
+
 #### JDB
 
 For this jumper, it is recommended to use a slide switch (part no. is provided in the [BOM](./doc/ibom.html))
@@ -225,13 +230,30 @@ Flash the firmware using the following steps:
 
 ## Cable Setup
 
-Cable setup is as like as a (standard) RGB cable for the SNES
+#### NTSC SNES Cable
+
+Cable setup is as like as a (standard) RGB cable for the NTSC-SNES
 
 | Signal | Pin MultiOut | Pin SCART | Ref. GND in SCART | Note |
 |:-------|:-------------|:----------|:------------------|:-----|
 | Red | 1 | 15 | 13 | Using a 220uF cap in series is possible |
 | Green | 2 | 11 | 9 | Using a 220uF cap in series is possible |
 | Blue | 4 | 7 | 5 | Using a 220uF cap in series is possible |
+| Sync | 3, 7 or 9 | 20 | 17 | Pin: See installation, Cable: see notes below |
+| GND | 5, 6 | 4,5,9,13,17,18,21 | Pin 21 @ SCART: outer shield |
+| +5V | 10 | 16 | 18 | SCART: use a 180ohm resistor in series |
+| Audio left | 11 | 6 | 4 | |
+| Audio right | 12 | 2 | 4 | |
+
+#### PAL SNES Cable
+
+Cable setup is as like as a (standard) RGB cable for the PAL-SNES
+
+| Signal | Pin MultiOut | Pin SCART | Ref. GND in SCART | Note |
+|:-------|:-------------|:----------|:------------------|:-----|
+| Red | 1 | 15 | 13 | 75ohm resistor to GND (pin 13) |
+| Green | 2 | 11 | 9 | 75ohm resistor to GND (pin 9) |
+| Blue | 4 | 7 | 5 | 75ohm resistor to GND (pin 5) |
 | Sync | 3, 7 or 9 | 20 | 17 | Pin: See installation, Cable: see notes below |
 | GND | 5, 6 | 4,5,9,13,17,18,21 | Pin 21 @ SCART: outer shield |
 | +5V | 10 | 16 | 18 | SCART: use a 180ohm resistor in series |
@@ -245,11 +267,7 @@ Cable setup is as like as a (standard) RGB cable for the SNES
 
 #### RGB cables:
 
-- If you buy an RGB cable, buy a typical RGB cable for a NTSC SNES with sync on luma (MultiAV pin 7) or sync on csync (MultiAV pin 3).
+- If you buy an RGB cable,
+  - NTSC: buy a typical RGB cable for a NTSC SNES with sync on luma (MultiAV pin 7) or sync on csync (MultiAV pin 3).
+  - PAL: buy a typical RGB cable for a PAL SNES with sync on luma (MultiAV pin 7). You can modify the cable to use sync on csync (MultiAV pin 3).
 - If you bought a raw csync cable and if you use the 75ohm output, please ensure to set J31 correctly
-  
-#### PAL RGB cables (SNES PAL):
-
-PAL RGB cable, i.e. a cable with additional 75ohm resistors to GND, are only supported if RN16 is a 39ohm resistor array.
-Or you solder a second 75ohm resistor array on top of the existing one.
-
