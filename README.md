@@ -270,4 +270,4 @@ Cable setup is as like as a (standard) RGB cable for the PAL-SNES
 - If you buy an RGB cable,
   - NTSC: buy a typical RGB cable for a NTSC SNES with sync on luma (MultiAV pin 7) or sync on csync (MultiAV pin 3).
   - PAL: buy a typical RGB cable for a PAL SNES with sync on luma (MultiAV pin 7). You can modify the cable to use sync on csync (MultiAV pin 3).
-- If you bought a raw csync cable and if you use the 75ohm output, please ensure to set J31 correctly
+- If you bought a raw csync cable and if you use the 75ohm output, please ensure to set JP9 correctly
