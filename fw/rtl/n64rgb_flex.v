@@ -25,6 +25,12 @@
 // Module Name:    n64rgb_flex
 // Project Name:   N64 RGB on Flex-PCB
 //
+// Note of authorship / special thanks to:
+// !!! Special thanks go to ikari_01 / mrehkopf !!!
+// Algorithm for NTSC/PAL detection and corresponding blanking phase decision
+// in VI-deblur mode originate from his source code:
+// https://github.com/mrehkopf/n64rgb/blob/master/n64rgb_buffered/n64rgb_buffered.v
+//
 //////////////////////////////////////////////////////////////////////////////////
 
 `define USE_POSEDGE_VCLK
