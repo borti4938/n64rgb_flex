@@ -35,12 +35,14 @@ However, there might be some awesome shops out there selling the boards for a gr
 ## Checklist: How to build the project
 
 - Use PCB files (either [KiCad-PCB design file](./pcb/n64rgb_v3.kicad_pcb) or [Gerber files](./pcb/gerber/)) to order your own PCB with following specs (might be not comprehensive)  
-  - Size: 160.5mm x 27.5mm
+  - Size: 160.28mm x 25.45mm
   - Layer: 2
-  - FPC thickness: 0.15mm
-  - Min hole size: dia 0.25mm / ring 0.45mm or lower
-  - Min trace width / spacing: 0.2mm
-  - Stiffener: bottom
+  - FPC thickness: 0.12mm
+  - Min hole size: dia 0.2mm / ring 0.4mm or lower
+  - Min trace width / spacing: 0.15mm
+  - Stiffener: Polyimide (bottom only)
+  - Polyimide thickness: 0.15mm  
+  There are two variants: _diy_ and _prod_. The _diy_ variant has larger via under the exposed pad and an opening in the stiffener under it in order to make soldering with standard soldering iron feasible. The _prod_ variant has smaller vias and no opening; so production assembly or use of soldering paste with hot air is mandatory.
 - If you paln to use solder paste, do not forget to order a stencil for top
 - Source the components you need, e.g. from Mouser or Digikey.  
   The BOM is available in [here](./doc/ibom.html).

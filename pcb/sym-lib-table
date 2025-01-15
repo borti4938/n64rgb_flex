@@ -1,6 +1,10 @@
 (sym_lib_table
+  (version 7)
   (lib (name "adv7125")(type "KiCad")(uri "${KIPRJMOD}/lib/adv7125.kicad_sym")(options "")(descr ""))
   (lib (name "ths7374ipw")(type "KiCad")(uri "${KIPRJMOD}/lib/ths7374ipw.kicad_sym")(options "")(descr ""))
   (lib (name "snes_multiout")(type "KiCad")(uri "${KIPRJMOD}/lib/snes_multiout.kicad_sym")(options "")(descr ""))
   (lib (name "n64_rcp")(type "KiCad")(uri "${KIPRJMOD}/lib/n64_rcp.kicad_sym")(options "")(descr ""))
+  (lib (name "5m80ze64")(type "KiCad")(uri "${KIPRJMOD}/lib/5m80ze64.kicad_sym")(options "")(descr ""))
+  (lib (name "THS8136IPHP")(type "KiCad")(uri "${KIPRJMOD}/lib/THS8136IPHP.kicad_sym")(options "")(descr ""))
+  (lib (name "AP7312_1833W6_7")(type "KiCad")(uri "${KIPRJMOD}/lib/AP7312_1833W6_7.kicad_sym")(options "")(descr ""))
 )
